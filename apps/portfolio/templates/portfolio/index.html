@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="static/style.css">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
+</head>
+
+<body>
+    <header>
+        <nav>
+            <img src="asset/carepy_logo-1.svg" alt="">
+            <ul>
+                <li><a href="#" class="active">About</a></li>
+                <li><a href="#skills-loc">Skills</a></li>
+                <li><a href="#portfolio-loc">Portfolio</a></li>
+                <li><a href="#experience-loc">Experience</a></li>
+            </ul>
+            <div class="search">
+                <input type="text" placeholder="search">
+                <i class="ri-search-line"></i>
+            </div>
+        </nav>
+        <div class="landing">
+            <div class="intro">
+                {% for p in portfolioo %}
+                <h3>I'M <Span>{{ p.name }}</Span><br>Python Developer<br></h3>
+                <button>Contact Me</button>
+                {% endfor %}
+            </div>
+            <div class="socials">
+                <div class="line"></div>
+                <i class="ri-facebook-circle-fill"></i>
+                <i class="ri-twitter-fill"></i>
+                <i class="ri-linkedin-fill"></i>
+                <i class="ri-whatsapp-line"></i>
+            </div>
+        </div>
+    </header>
+    <section class="about">
+        <h1>About</h1>
+        {% for p in portfolioo %}
+        <div class="description">
+            <div class="line"></div>
+            <p>{{ p.about }}</p>
+        </div>
+        {% endfor %}
+    </section>
+    <section class="skills", id="skills-loc">
+        <h1>My Skills</h1>
+        {% for p in portfolioo %}
+        <div class="cards">
+            <div class="skill-card">
+                <img src="" alt="">
+                <h2>{{ p.title }}</h2>
+            </div>
+        </div>
+        {% endfor %}
+    </section>
+    <section class="portfolio" id="portfolio-loc">
+        <h1>Portfolio</h1>
+        <div class="portfolio-cards">
+            <div class="portfolio-card">
+                <img src="asset/images/aperture-vintage-HF1IO60tQdc-unsplash.jpg" alt="">
+                <div class="overlay">
+                    <h3>Amazon Scrapper</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia, laudantium!</p>
+                    <button>See More -></button>
+                </div>
+            </div>
+            <div class="portfolio-card">
+                <img src="asset/images/martin-martz-3_x1FRGAEwY-unsplash.jpg" alt="">
+                <div class="overlay">
+                    <h3>Facebook Scrapper</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia, laudantium!</p>
+                    <button>See More -></button>
+                </div>
+            </div>
+            <div class="portfolio-card">
+                <img src="asset/images/vimal-s-bVplevb7Bhk-unsplash.jpg" alt="">
+                <div class="overlay">
+                    <h3>Google Scrapper</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia, laudantium!</p>
+                    <button>See More -></button>
+                </div>
+            </div>
+            <div class="portfolio-card">
+                <img src="asset/images/warren-umoh-K7M7dQO-HrA-unsplash.jpg" alt="">
+                <div class="overlay">
+                    <h3>Twitter Scrapper</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia, laudantium!</p>
+                    <button>See More -></button>
+                </div>
+            </div>
+            <div class="portfolio-card">
+                <img src="asset/images/warren-umoh-pnMjGMOs2Xw-unsplash.jpg" alt="">
+                <div class="overlay">
+                    <h3>LinkedIn Scrapper</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia, laudantium!</p>
+                    <button>See More -></button>
+                </div>
+            </div>
+            <div class="portfolio-card">
+                <img src="asset/images/warren-umoh-VL12rhr4mi0-unsplash.jpg" alt="">
+                <div class="overlay">
+                    <h3>YouTube Scrapper</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia, laudantium!</p>
+                    <button>See More -></button>
+                </div>
+            </div>
+        </div>
+        <Button>View More</Button>
+    </section>
+    <section class="experience", id="experience-loc">
+        <div class="darker-div"></div>
+        <h1>Experience</h1>
+        <div class="lighter-div">
+            <div class="exp">
+                <h2>Senior Python Developer</h2>
+                <div class="exp-desc">
+                    <h3>Scottech, Toledo</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Inventore, repellat! Mollitia nostrum,
+                        dolor repellat deleniti officiis voluptatem quas labore cupiditate iure ullam doloribus aliquam
+                        voluptates. Ratione earum reprehenderit iure, esse assumenda minima vero delectus consequuntur.
+                        Laborum eligendi nisi, doloremque, ab sint id enim in vel molestias, nihil vero suscipit a?
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Inventore, repellat! Mollitia nostrum,
+                        dolor repellat deleniti officiis voluptatem quas labore cupiditate iure ullam doloribus aliquam
+                        voluptates. Ratione earum reprehenderit iure, esse assumenda minima vero delectus consequuntur.
+                        Laborum eligendi nisi, doloremque, ab sint id enim in vel molestias, nihil vero suscipit a?</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="contact-me" id="contact-loc">
+        <h1>Contact Me</h1>
+        <div class="contact">
+            <div class="contact-card">
+                <i class="ri-message-3-line"></i>
+                <p>work.devalphaspace.com</p>
+            </div>
+            <div class="contact-card">
+                <i class="ri-phone-line"></i>
+                <p>0123456789</p>
+            </div>
+            <div class="contact-card">
+                <i class="ri-map-pin-3-line"></i>
+                <p>Tripura, India</p>
+            </div>
+        </div>
+    </section>
+    <script src="script.js"></script>
+</body>
+
+</html>
